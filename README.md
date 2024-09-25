@@ -44,3 +44,9 @@ Sideloading works in Windows.
 ![outlook home](https://github.com/wafendy/outlook-plugin/raw/main/screenshots/office-add-ins.png)
 
 ![outlook home](https://github.com/wafendy/outlook-plugin/raw/main/screenshots/add-custom.png)
+
+# Resources
+
+ScriptLab: https://appsource.microsoft.com/en-us/product/office/WA200001603
+
+office-js-snippets: https://github.com/OfficeDev/office-js-snippets
