@@ -1,0 +1,14 @@
+# misc
+**/.DS_Store
+
+# package directories
+node_modules
+
+# builds
+build
+
+# Coverage test
+coverage
+
+#IDE
+.vscode
