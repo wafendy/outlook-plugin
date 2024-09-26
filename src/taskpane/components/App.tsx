@@ -2,7 +2,6 @@ import * as React from "react";
 import Header from "./Header";
 import TextInsertion from "./TextInsertion";
 import { makeStyles } from "@fluentui/react-components";
-import { Ribbon24Regular, LockOpen24Regular, DesignIdeas24Regular } from "@fluentui/react-icons";
 import { insertText } from "../taskpane";
 
 interface AppProps {

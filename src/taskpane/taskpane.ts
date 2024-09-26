@@ -12,6 +12,7 @@ export async function insertText(text: string) {
         }
       }
     );
+    console.log("Done");
   } catch (error) {
     console.log("Error: " + error);
   }

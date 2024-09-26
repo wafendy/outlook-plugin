@@ -24,6 +24,13 @@ Sideloading not working in OSX. Must run the dev server first, then add the mani
 - manually add the manifest file (see screenshots below)
 ```
 
+### console.log
+
+```
+# From terminal
+defaults write com.microsoft.Outlook OfficeWebAddinDeveloperExtras -bool true
+```
+
 # Windows
 
 Sideloading works in Windows.
@@ -50,3 +57,5 @@ Sideloading works in Windows.
 ScriptLab: https://appsource.microsoft.com/en-us/product/office/WA200001603
 
 office-js-snippets: https://github.com/OfficeDev/office-js-snippets
+
+enable console log in Mac: https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-office-add-ins-on-ipad-and-mac
