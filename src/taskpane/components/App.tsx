@@ -10,7 +10,6 @@ interface AppProps {
 
 const useStyles = makeStyles({
   root: {
-    "background-color": "pink",
     minHeight: "100vh",
   },
 });
@@ -18,6 +17,7 @@ const useStyles = makeStyles({
 const App: React.FC<AppProps> = (props: AppProps) => {
   const styles = useStyles();
 
+  console.log("======> App React");
   return (
     <div className={styles.root}>
       <Header logo="assets/logo-filled.png" title={props.title} />

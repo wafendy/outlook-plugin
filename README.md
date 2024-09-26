@@ -31,6 +31,16 @@ Sideloading not working in OSX. Must run the dev server first, then add the mani
 defaults write com.microsoft.Outlook OfficeWebAddinDeveloperExtras -bool true
 ```
 
+### clearing cache
+
+```
+rm -fr ~/Library/Containers/com.microsoft.Outlook/Data/Documents/wef
+rm -fr ~/Library/Containers/com.Microsoft.Outlook/Data/Library
+rm -fr ~/Library/Containers/com.microsoft.Outlook/Data/Library/Application\ Support/Microsoft/Office/16.0/Wef/
+rm -fr ~/Library/Containers/com.microsoft.Office365ServiceV2/Data/Caches/com.microsoft.Office365ServiceV2/
+rm -fr ~/Library/Containers/com.microsoft.Office365ServiceV2/Data/Library/Caches/com.microsoft.Office365ServiceV2/
+```
+
 # Windows
 
 Sideloading works in Windows.
