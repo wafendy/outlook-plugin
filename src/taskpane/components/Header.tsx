@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
 
   return (
     <section className={styles.welcome__header}>
-      <Image width="415" height="90" src={logo} alt={title} />
+      <Image width="250" height="54" src={logo} alt={title} />
     </section>
   );
 };

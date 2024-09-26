@@ -6,6 +6,7 @@ import { Button, Field, Textarea, tokens, makeStyles } from "@fluentui/react-com
 
 interface TextInsertionProps {
   insertText: (text: string) => void;
+  replaceText: (text: string) => void;
 }
 
 const useStyles = makeStyles({
@@ -20,11 +21,17 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   textAreaField: {
-    marginLeft: "20px",
+    marginLeft: "0px",
     marginTop: "30px",
     marginBottom: "20px",
-    marginRight: "20px",
-    maxWidth: "50%",
+    marginRight: "0px",
+    maxWidth: "100%",
+  },
+
+  buttonAction: {
+    width: "150px",
+    marginLeft: "5px",
+    marginRight: "5px",
   },
 });
 
@@ -35,6 +42,10 @@ const TextInsertion: React.FC<TextInsertionProps> = (props: TextInsertionProps) 
     await props.insertText(text);
   };
 
+  const handleTextReplacement = async () => {
+    await props.replaceText(text);
+  };
+
   const handleTextChange = async (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(event.target.value);
   };
@@ -43,13 +54,34 @@ const TextInsertion: React.FC<TextInsertionProps> = (props: TextInsertionProps) 
 
   return (
     <div className={styles.textPromptAndInsertion}>
-      <Field className={styles.textAreaField} size="large" label="Enter text to be inserted into the document.">
+      <Field className={styles.textAreaField} size="large" label="Customer Query.">
         <Textarea size="large" value={text} onChange={handleTextChange} />
       </Field>
       <Field className={styles.instructions}>Click the button to insert text.</Field>
-      <Button appearance="primary" disabled={false} size="large" onClick={handleTextInsertion}>
-        Insert text
-      </Button>
+      <div>
+        <span>
+          <Button
+            className={styles.buttonAction}
+            appearance="primary"
+            disabled={false}
+            size="large"
+            onClick={handleTextReplacement}
+          >
+            Replace
+          </Button>
+        </span>
+        <span>
+          <Button
+            className={styles.buttonAction}
+            appearance="secondary"
+            disabled={false}
+            size="large"
+            onClick={handleTextInsertion}
+          >
+            Insert
+          </Button>
+        </span>
+      </div>
     </div>
   );
 };
