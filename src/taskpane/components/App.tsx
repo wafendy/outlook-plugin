@@ -2,7 +2,7 @@ import * as React from "react";
 import Header from "./Header";
 import TextInsertion from "./TextInsertion";
 import { makeStyles } from "@fluentui/react-components";
-import { insertText, replaceText } from "../taskpane";
+import { insertText } from "../taskpane";
 
 interface AppProps {
   title: string;
@@ -11,6 +11,7 @@ interface AppProps {
 const useStyles = makeStyles({
   root: {
     minHeight: "100vh",
+    fontFamily: "Open Sans, Helvetica"
   },
 });
 
@@ -21,7 +22,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
   return (
     <div className={styles.root}>
       <Header logo="assets/logo-filled.png" title={props.title} />
-      <TextInsertion insertText={insertText} replaceText={replaceText} />
+      <TextInsertion insertText={insertText} />
     </div>
   );
 };
