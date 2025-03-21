@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     backgroundColor: tokens.colorNeutralBackground3,
+    paddingTop: "24px",
   },
   message: {
     fontSize: tokens.fontSizeHero900,

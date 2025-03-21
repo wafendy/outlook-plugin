@@ -3,6 +3,8 @@ import Header from "./Header";
 import TextInsertion from "./TextInsertion";
 import { makeStyles } from "@fluentui/react-components";
 import { insertText } from "../taskpane";
+import Metadata from "./Metadata";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 interface AppProps {
   title: string;
@@ -11,19 +13,23 @@ interface AppProps {
 const useStyles = makeStyles({
   root: {
     minHeight: "100vh",
-    fontFamily: "Open Sans, Helvetica"
+    fontFamily: "Open Sans, Helvetica",
   },
 });
+
+const queryClient = new QueryClient();
 
 const App: React.FC<AppProps> = (props: AppProps) => {
   const styles = useStyles();
 
-  console.log("======> App React");
   return (
-    <div className={styles.root}>
-      <Header logo="assets/logo-filled.png" title={props.title} />
-      <TextInsertion insertText={insertText} />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className={styles.root}>
+        <Metadata />
+        <Header logo="assets/logo-filled.png" title={props.title} />
+        <TextInsertion insertText={insertText} />
+      </div>
+    </QueryClientProvider>
   );
 };
 
