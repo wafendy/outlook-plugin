@@ -3,7 +3,7 @@ import { Version } from "../interfaces/version.interface";
 
 class VersionService {
   public getVersion = async (): Promise<Version> => {
-    return api.get("/v2/external/version").then((resp) => resp.data);
+    return api.get("/version").then((resp) => resp.data);
   };
 }
 
