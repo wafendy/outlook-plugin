@@ -10,8 +10,8 @@
   <HighResolutionIconUrl DefaultValue="https://localhost:8888/assets/logo128x128.png"/>
   <SupportUrl DefaultValue="https://tech.gov.sg"/>
   <AppDomains>
-    <AppDomain>https://tech.gov.sg</AppDomain>
     <AppDomain>https://localhost:8888</AppDomain>
+    <AppDomain>https://www.dev.smartcompose.gov.sg</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
