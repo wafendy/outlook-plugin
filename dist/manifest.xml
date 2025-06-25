@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
+  <Id>322e6e8b-2ed5-4ce0-b225-8b0711746a9f</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>GovTech</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="SmartCompose"/>
+  <Description DefaultValue="Email Reply Generation using RAG"/>
+  <IconUrl DefaultValue="https://www.dev.smartcompose.gov.sg/static/dist/assets/logo64x64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://www.dev.smartcompose.gov.sg/static/dist/assets/logo128x128.png"/>
+  <SupportUrl DefaultValue="https://tech.gov.sg"/>
+  <AppDomains>
+    <AppDomain>https://tech.gov.sg</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1"/>
+    </Sets>
+  </Requirements>
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://www.dev.smartcompose.gov.sg/static/dist/taskpane.html"/>
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+  <Permissions>ReadWriteItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+  </Rule>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <bt:Sets DefaultMinVersion="1.3">
+          <bt:Set Name="Mailbox"/>
+        </bt:Sets>
+      </Requirements>
+      <Hosts>
+        <Host xsi:type="MailHost">
+          <DesktopFormFactor>
+            <FunctionFile resid="Commands.Url"/>
+            <ExtensionPoint xsi:type="MessageComposeCommandSurface">
+              <OfficeTab id="GovTech.OfficeTab1">
+                <Group id="GovTech.OfficeTab1.Group1">
+                  <Label resid="Group1.Label"/>
+                  <Control xsi:type="Button" id="GovTech.OfficeTab1.button">
+                    <Label resid="TaskpaneButton1.Label"/>
+                    <Supertip>
+                      <Title resid="TaskpaneButton1.Label"/>
+                      <Description resid="TaskpaneButton1.Tooltip"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="SmartCompose.Icon16"/>
+                      <bt:Image size="32" resid="SmartCompose.Icon32"/>
+                      <bt:Image size="80" resid="SmartCompose.Icon80"/>
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="Taskpane.Url"/>
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+          </DesktopFormFactor>
+        </Host>
+      </Hosts>
+      <Resources>
+        <bt:Images>
+          <bt:Image id="SmartCompose.Icon16" DefaultValue="https://www.dev.smartcompose.gov.sg/static/dist/assets/logo16x16.png"/>
+          <bt:Image id="SmartCompose.Icon32" DefaultValue="https://www.dev.smartcompose.gov.sg/static/dist/assets/logo32x32.png"/>
+          <bt:Image id="SmartCompose.Icon80" DefaultValue="https://www.dev.smartcompose.gov.sg/static/dist/assets/logo80x80.png"/>
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="Commands.Url" DefaultValue="https://www.dev.smartcompose.gov.sg/static/dist/commands.html"/>
+          <bt:Url id="Taskpane.Url" DefaultValue="https://www.dev.smartcompose.gov.sg/static/dist/taskpane.html"/>
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="Group1.Label" DefaultValue="GovTech Add-in"/>
+          <bt:String id="Group2.Label" DefaultValue="SmartCompose Add-in"/>
+          <bt:String id="TaskpaneButton1.Label" DefaultValue="Show Taskpane 1"/>
+          <bt:String id="TaskpaneButton2.Label" DefaultValue="Show Taskpane 2"/>
+          <bt:String id="residLabel4" DefaultValue="Custom Custom"/>
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="TaskpaneButton1.Tooltip" DefaultValue="Opens a task pane 1."/>
+          <bt:String id="TaskpaneButton2.Tooltip" DefaultValue="Opens a task pane 2."/>
+          <bt:String id="ActionButton1.Tooltip" DefaultValue="Perform an action when clicked."/>
+          <bt:String id="ActionButton2.Tooltip" DefaultValue="Perform an action when clicked."/>
+        </bt:LongStrings>
+      </Resources>
+    </VersionOverrides>
+  </VersionOverrides>
+</OfficeApp>

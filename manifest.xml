@@ -6,11 +6,12 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="SmartCompose"/>
   <Description DefaultValue="Email Reply Generation using RAG"/>
-  <IconUrl DefaultValue="https://localhost:8888/assets/logo-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:8888/assets/logo-128.png"/>
+  <IconUrl DefaultValue="https://localhost:8888/assets/logo64x64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:8888/assets/logo128x128.png"/>
   <SupportUrl DefaultValue="https://tech.gov.sg"/>
   <AppDomains>
     <AppDomain>https://tech.gov.sg</AppDomain>
+    <AppDomain>https://localhost:8888</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
