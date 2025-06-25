@@ -6,6 +6,8 @@ node_modules
 
 # builds
 build
+dist
+dist.zip
 
 # Coverage test
 coverage
