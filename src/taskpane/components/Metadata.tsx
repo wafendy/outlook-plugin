@@ -1,5 +1,5 @@
-import * as React from "react";
 import { makeStyles } from "@fluentui/react-components";
+import * as React from "react";
 import { useGetVersionQuery } from "../../hooks/version";
 
 const useStyles = makeStyles({

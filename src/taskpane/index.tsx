@@ -97,6 +97,8 @@ async function run() {
       console.log("Display Name:", data.displayName);
       console.log("Email:", data.email);
       console.log("Job Title:", data.jobTitle);
+
+      document.getElementById("active-user").textContent = data.email;
     })
     .catch((error) => {
       console.error("Error fetching user data:", error);
@@ -114,6 +116,7 @@ async function run() {
     const names = data.value.map((item) => item.name);
 
     // Be sure the taskpane.html has an element with Id = item-subject.
+
     const label = document.getElementById("item-subject");
 
     // Write file names to task pane and the console.
