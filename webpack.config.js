@@ -7,7 +7,7 @@ const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
 
 const urlDev = "https://localhost:8888/";
-const urlProd = "https://smartcompose.gov.sg/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
+const urlProd = "https://www.dev.smartcompose.gov.sg/static/dist/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 
 async function getHttpsOptions() {
   const httpsOptions = await devCerts.getHttpsServerOptions();

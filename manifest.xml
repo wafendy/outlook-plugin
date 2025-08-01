@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
   <Id>322e6e8b-2ed5-4ce0-b225-8b0711746a9f</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.0.3</Version>
   <ProviderName>GovTech</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="SmartCompose"/>
   <Description DefaultValue="Email Reply Generation using RAG"/>
-  <IconUrl DefaultValue="https://localhost:8888/assets/logo-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:8888/assets/logo-128.png"/>
+  <IconUrl DefaultValue="https://localhost:8888/assets/logo64x64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:8888/assets/logo128x128.png"/>
   <SupportUrl DefaultValue="https://tech.gov.sg"/>
   <AppDomains>
-    <AppDomain>https://tech.gov.sg</AppDomain>
+    <AppDomain>https://localhost:8888</AppDomain>
+    <AppDomain>https://www.dev.smartcompose.gov.sg</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
